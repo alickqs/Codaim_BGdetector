@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Transliterate</title>
+        <link rel="stylesheet" href="../static/css/firstpage.css" />
+    </head>
+
+    <body>
+        <audio id="myAudio" src="../static/audio/maynkraft--zvuki-maynkraft.mp3" autoplay loop hidden></audio>
+        <div class="audio-control" onclick="toggleAudio()">
+            <img src="../static/images/play.png" alt="Play/Pause" />
+        </div>
+        <script>
+            const audioPlayer = document.getElementById("myAudio");
+            const audioStatus = document.querySelector(".audio-control img");
+
+            function toggleAudio() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    audioStatus.src = "../static/images/pause.png";
+                } else {
+                    audioPlayer.pause();
+                    audioStatus.src = "../static/images/play.png";
+                }
+            }
+        </script>
+
+        <!-- Здесь мы пишем первую страницу (часть без пролистывания) с картинкой на фоне) -->
+        <section class="header">
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="../static/utilities/video_translate.html">EDIT</a></li>
+                        <li><a href="#aaa">ABOUT US</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <div class="text-box">
+                <h1>Welcone to our project!</h1>
+                <p></p>
+                <a href="../static/utilities/video_translate.html" class="hero-btn">try</a>
+            </div>
+        </section>
+
+        <!-- А это уже страница ниже основной (пролистывание) -->
+        <section id="features">
+            <h1>Features we offer</h1>
+            <p>
+                Может пополняться
+            </p>
+            <div class="row">
+                <div class="features-col">
+                    <a>Работа с фоном</a>
+                    <p>Отделяем фон картинки</p>
+                </div>
+                <div class="features-col">
+                    <a>КЛассификация</a>
+                    <p>Классифицируем картинки по результатам работы модели на фоне</p>
+                </div>
+                <div class="features-col">
+                    <a>Советы</a>
+                    <p>Модель говорит какие именно ошибки были допущены</p>
+                </div>
+            </div>
+        </section>
+        <div id="aaa">
+            <section id="features">
+                <h1>Над проектом работали</h1>
+                <p></p>
+                <div class="circle-image">
+                    <img src="../static/images/Ju.jpg" />
+                    <img src="../static/images/Al.jpg" />
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
