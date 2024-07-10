@@ -1,0 +1,8 @@
+torch
+torchvision
+streamlit
+addict==2.3.0
+opencv-python
+opencv-python-headless
+albumentations
+numpy<2.0
